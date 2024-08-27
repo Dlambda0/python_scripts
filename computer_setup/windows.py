@@ -12,7 +12,7 @@ STEAM_PATH = 'SteamSetup.exe'
 FIREFOX_URL = 'https://www.mozilla.org/en-US/firefox/download/thanks/'
 FIREFOX_PATH = 'Firefox Installer.exe'
 
-VSCODE_URL = ''
+VSCODE_URL = 'https://update.code.visualstudio.com/latest/win32-x64/stable'
 VSCODE_PATH = ''
 
 DISCORD_URL = ''
