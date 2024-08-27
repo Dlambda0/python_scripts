@@ -41,7 +41,7 @@ def powershell_script(script_path):
     except subprocess.CalledProcessError as e:
         print(f"failed")
 
-#add a download meter for the looks
+#include a download meter for the looks
 if __name__ == '__main__':
     print("Downlaoding Steam")
     download_program(STEAM_URL, STEAM_PATH)
