@@ -1,3 +1,6 @@
+# a full install of my windows system (mostly made for fun)
+# Proceed with caution, may do some damage to your computer
+
 import requests
 import subprocess
 import os
@@ -6,8 +9,8 @@ import sys
 STEAM_URL = 'https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe'
 STEAM_PATH = 'SteamSetup.exe'
 
-FIREFOX_URL = ''
-FIREFOX_PATH = ''
+FIREFOX_URL = 'https://www.mozilla.org/en-US/firefox/download/thanks/'
+FIREFOX_PATH = 'Firefox Installer.exe'
 
 VSCODE_URL = ''
 VSCODE_PATH = ''
