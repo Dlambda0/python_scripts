@@ -3,8 +3,10 @@
 
 import keyboard
 
+
 def underscore():
     keyboard.write("_")
+
 
 keyboard.add_hotkey('shift+space', underscore)
 

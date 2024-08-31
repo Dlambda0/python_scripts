@@ -1,4 +1,4 @@
-# a full install of my windows system (mostly made for fun)
+# a full installation of my Windows system (mostly made for fun)
 # Proceed with caution, may do some damage to your computer
 
 import requests
@@ -15,16 +15,17 @@ FIREFOX_PATH = 'Firefox Installer.exe'
 VSCODE_URL = 'https://update.code.visualstudio.com/latest/win32-x64/stable'
 VSCODE_PATH = ''
 
-DISCORD_URL = ''
-DISCORD_PATH = ''
+DISCORD_URL = ' https://discord.com/download'
+DISCORD_PATH = 'Discord.exe'
 
-PRISM_LAUNCHER_URL = ''
-PRISM_LAUNCHER_PATH = ''
+PRISM_LAUNCHER_URL = 'https://prismlauncher.org/download'
+PRISM_LAUNCHER_PATH = 'Prismlauncher.exe'
 
 SCOOP_URL = ''
 SCOOP_PATH = ''
 
-#used to download programs
+
+# used to download programs
 def download_program(url, save_path):
     response = requests.get(url, stream=True)
     if response.status_code == 200:
@@ -35,25 +36,23 @@ def download_program(url, save_path):
     else:
         print(f"Failed to download: {response.status_code}")
 
+
 def powershell_script(script_path):
     try:
         subprocess.run(["powershell", "-ExecutionPolicy", "ByPass", "-File", script_path], check=True)
     except subprocess.CalledProcessError as e:
         print(f"failed")
 
-#add a download meter for the looks
+
+# implement a download meter for the looks
 if __name__ == '__main__':
     print("Downlaoding Steam")
     download_program(STEAM_URL, STEAM_PATH)
 
     print("Downloading Firefox")
 
-
-
     print("Downloading Scoop")
     if download_program(SCOOP_URL, SCOOP_PATH):
         powershell_script(SCOOP_PATH)
-
-
 
     os.remove(STEAM_PATH, FIREFOX_PATH, VSCODE_PATH, DISCORD_PATH, PRISM_LAUNCHER_PATH, SCOOP_PATH)
